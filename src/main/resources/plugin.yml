@@ -1,0 +1,4 @@
+name: Iridium
+version: '1.0'
+main: net.glasscrab.iridium.Iridium
+api-version: '1.21.3'
