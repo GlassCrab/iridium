@@ -1,5 +1,6 @@
 package net.glasscrab.iridium;
 
+import net.glasscrab.iridium.commands.ToggleRatCommand;
 import net.glasscrab.iridium.farming.*;
 import net.glasscrab.iridium.iridium.IridiumArmorVanishEvent;
 import net.glasscrab.iridium.iridium.IridiumDropEvent;
@@ -30,6 +31,10 @@ public final class Iridium extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new CropTrampleEvent(),this);
         this.getServer().getPluginManager().registerEvents(new PlayerBonemealCropEvent(new BlockManager(this, new ItemManager(this)),new RNGManager(),this),this);
         this.getServer().getPluginManager().registerEvents(new MiscMobDrops(new RNGManager()), this);
+        this.getServer().getPluginManager().registerEvents(new BreakerPushEvent(),this);
+        this.getServer().getPluginManager().registerEvents(new BlockGenerateEvent(this),this);
+
+        this.getCommand("togglerat").setExecutor(new ToggleRatCommand());
 
         IridiumRecipes ir = new IridiumRecipes(new ItemManager(this),this);
         Bukkit.addRecipe(ir.IridiumIngotFurnaceRecipe());

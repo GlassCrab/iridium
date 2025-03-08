@@ -1,4 +1,8 @@
 name: Iridium
 version: '1.0'
 main: net.glasscrab.iridium.Iridium
-api-version: '1.21.3'
+api-version: '1.21.4'
+
+commands:
+  togglerat:
+    description: toggles rat

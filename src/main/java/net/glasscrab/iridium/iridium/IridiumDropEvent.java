@@ -2,10 +2,7 @@ package net.glasscrab.iridium.iridium;
 
 import net.glasscrab.iridium.ItemManager;
 import net.glasscrab.iridium.RNGManager;
-import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
-import org.bukkit.Particle;
-import org.bukkit.World;
+import org.bukkit.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -35,7 +32,7 @@ public class IridiumDropEvent implements Listener {
 
 
 
-        if(rngManager.jackpot(100)){
+        if(rngManager.jackpot(1000)){
 
             itemManager.dropItemOnBlock(e.getBlock(), itemManager.makeBasicItem("Iridium Fragment", new NamespacedKey("iridium", "iridium_fragment"), ItemRarity.COMMON));
             e.getPlayer().getWorld().spawnParticle(Particle.END_ROD,e.getBlock().getLocation().add(0.5,0.5,0.5),10,0.5,0.5,0.5);
@@ -120,11 +117,12 @@ public class IridiumDropEvent implements Listener {
 
     @EventHandler
     public void onBreakDeepslate(BlockDropItemEvent e){
+        if(!e.getPlayer().getGameMode().equals(GameMode.SURVIVAL)) return;
         if(e.getBlockState().getType() != Material.DEEPSLATE) return;
         if(e.getItems().getFirst().getItemStack().getType() != Material.COBBLED_DEEPSLATE) return;
         if(e.getPlayer().getInventory().getItemInMainHand().getType() != Material.NETHERITE_PICKAXE) return;
 
-        if(rngManager.jackpot(1000)){
+        if(rngManager.jackpot(5000)){
             itemManager.dropItemOnItem(e.getItems().getFirst(),itemManager.makeBasicItem("Iridium Fragment", new NamespacedKey("iridium", "iridium_fragment"), ItemRarity.COMMON));
             e.getPlayer().getWorld().spawnParticle(Particle.END_ROD,e.getBlock().getLocation().add(0.5,0.5,0.5),2,2,2,10);
         }
