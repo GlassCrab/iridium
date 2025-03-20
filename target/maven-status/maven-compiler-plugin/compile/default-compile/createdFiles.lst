@@ -1,4 +1,5 @@
 net\glasscrab\iridium\iridium\IridiumDropEvent.class
+net\glasscrab\iridium\iridium\IridiumPistonCraftEvent$2.class
 net\glasscrab\iridium\iridium\IridiumPistonCraftEvent.class
 net\glasscrab\iridium\farming\PlayerBonemealCropEvent$1.class
 net\glasscrab\iridium\farming\BreakCropEvent.class

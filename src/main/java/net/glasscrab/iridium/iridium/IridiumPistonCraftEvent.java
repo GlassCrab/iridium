@@ -3,6 +3,7 @@ package net.glasscrab.iridium.iridium;
 import io.papermc.paper.datacomponent.DataComponentTypes;
 import io.papermc.paper.registry.keys.SoundEventKeys;
 import net.glasscrab.iridium.ItemManager;
+import net.kyori.adventure.text.Component;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Item;
@@ -37,7 +38,7 @@ public class IridiumPistonCraftEvent implements Listener {
         Block netheriteBlock = e.getBlocks().getFirst();
         Block cauldron = netheriteBlock.getRelative(0,-2,0);
 
-        if(cauldron.getLocation().getNearbyEntitiesByType(Item.class,1).size() != 2) return;
+        if(cauldron.getLocation().getNearbyEntitiesByType(Item.class,1.5).size() != 2) return;
         ItemStack recipeItem = new ItemStack(Material.STONE,1);
         ItemStack upgradeableItem = new ItemStack(Material.STONE, 1);
         //ItemStack iridiumFragment = new ItemStack(Material.STONE,1);
@@ -54,7 +55,17 @@ public class IridiumPistonCraftEvent implements Listener {
         if(recipeItem.getType().equals(Material.STONE) || upgradeableItem.getType().equals(Material.STONE)) return;
         for(Item item: items){
             if(item.getItemStack().equals(recipeItem)){
-                item.getItemStack().setAmount(item.getItemStack().getAmount()-1);
+
+                new BukkitRunnable() {
+
+                    @Override
+                    public void run() {
+                        // What you want to schedule goes here
+                        item.getItemStack().setAmount(item.getItemStack().getAmount()-1);
+                    }
+
+                }.runTaskLater(this.plugin, 1);
+
             }
             if(item.getItemStack().equals(upgradeableItem)){
                 if(recipeItem.getData(DataComponentTypes.ITEM_MODEL).value().equals("iridium_ingot")){

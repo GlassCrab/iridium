@@ -34,9 +34,9 @@ public class ToggleRatCommand implements CommandExecutor {
             return true;
         }
 
-        else if((p.getLocation().getBlockX() == -25 && p.getLocation().getBlockY() == 224 && p.getLocation().getBlockZ() == -25)){
+        else if((p.getLocation().getBlockX() == -25 && p.getLocation().getBlockY() == 224 && p.getLocation().getBlockZ() == -30)){
             sender.sendMessage(Component.text("YOU HAVE JOINED THEM!", TextColor.fromCSSHexString("#c32900"), TextDecoration.BOLD));
-            sender.sendMessage(Component.text("Ping glasscrab on the Iridium discord with the message '123ratthew321'", TextColor.fromCSSHexString("#9a9697")));
+            //sender.sendMessage(Component.text("Ping glasscrab on the Iridium discord with the message '123ratthew321'", TextColor.fromCSSHexString("#9a9697")));
             p.playSound(Sound.sound(new NamespacedKey("minecraft","entity.lightning_bolt.thunder"), Sound.Source.MASTER,1.0f,2.0f));
             p.getAttribute(Attribute.SCALE).setBaseValue(0.25);
             return true;

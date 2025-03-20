@@ -54,10 +54,10 @@ public class IridiumDropEvent implements Listener {
         if(rngManager.jackpot(100)){
 
             itemManager.dropItemOnBlock(e.getBlock(), itemManager.makeBasicItem("Iridium Fragment", new NamespacedKey("iridium", "iridium_fragment"), ItemRarity.COMMON));
-            e.getPlayer().getWorld().spawnParticle(Particle.END_ROD,e.getBlock().getLocation().add(0.5,0.5,0.5),2,2,2,10);
+            e.getPlayer().getWorld().spawnParticle(Particle.END_ROD,e.getBlock().getLocation().add(0.5,0.5,0.5),10,0.5,0.5,0.5);
         }
         else{
-            e.getPlayer().getWorld().spawnParticle(Particle.ASH,e.getBlock().getLocation().add(0.5,0.5,0.5),2,2,2,10);
+            e.getPlayer().getWorld().spawnParticle(Particle.ASH,e.getBlock().getLocation().add(0.5,0.5,0.5),30,0.5,0.5,0.5);
         }
     }
 
@@ -72,10 +72,10 @@ public class IridiumDropEvent implements Listener {
         if(rngManager.jackpot(100)){
 
             itemManager.dropItemOnBlock(e.getBlock(), itemManager.makeBasicItem("Iridium Fragment", new NamespacedKey("iridium", "iridium_fragment"), ItemRarity.COMMON));
-            e.getPlayer().getWorld().spawnParticle(Particle.END_ROD,e.getBlock().getLocation().add(0.5,0.5,0.5),2,2,2,10);
+            e.getPlayer().getWorld().spawnParticle(Particle.END_ROD,e.getBlock().getLocation().add(0.5,0.5,0.5),10,0.5,0.5,0.5);
         }
         else{
-            e.getPlayer().getWorld().spawnParticle(Particle.ASH,e.getBlock().getLocation().add(0.5,0.5,0.5),2,2,2,10);
+            e.getPlayer().getWorld().spawnParticle(Particle.ASH,e.getBlock().getLocation().add(0.5,0.5,0.5),30,0.5,0.5,0.5);
         }
     }
 
@@ -90,10 +90,10 @@ public class IridiumDropEvent implements Listener {
         if(rngManager.jackpot(100)){
 
             itemManager.dropItemOnBlock(e.getBlock(), itemManager.makeBasicItem("Iridium Fragment", new NamespacedKey("iridium", "iridium_fragment"), ItemRarity.COMMON));
-            e.getPlayer().getWorld().spawnParticle(Particle.END_ROD,e.getBlock().getLocation().add(0.5,0.5,0.5),2,2,2,10);
+            e.getPlayer().getWorld().spawnParticle(Particle.END_ROD,e.getBlock().getLocation().add(0.5,0.5,0.5),10,0.5,0.5,0.5);
         }
         else{
-            e.getPlayer().getWorld().spawnParticle(Particle.ASH,e.getBlock().getLocation().add(0.5,0.5,0.5),2,2,2,10);
+            e.getPlayer().getWorld().spawnParticle(Particle.ASH,e.getBlock().getLocation().add(0.5,0.5,0.5),30,0.5,0.5,0.5);
         }
     }
 
@@ -108,10 +108,10 @@ public class IridiumDropEvent implements Listener {
         if(rngManager.jackpot(100)){
 
             itemManager.dropItemOnBlock(e.getBlock(), itemManager.makeBasicItem("Iridium Fragment", new NamespacedKey("iridium", "iridium_fragment"), ItemRarity.COMMON));
-            e.getPlayer().getWorld().spawnParticle(Particle.END_ROD,e.getBlock().getLocation().add(0.5,0.5,0.5),2,2,2,10);
+            e.getPlayer().getWorld().spawnParticle(Particle.END_ROD,e.getBlock().getLocation().add(0.5,0.5,0.5),10,0.5,0.5,0.5);
         }
         else{
-            e.getPlayer().getWorld().spawnParticle(Particle.ASH,e.getBlock().getLocation().add(0.5,0.5,0.5),2,2,2,10);
+            e.getPlayer().getWorld().spawnParticle(Particle.ASH,e.getBlock().getLocation().add(0.5,0.5,0.5),30,0.5,0.5,0.5);
         }
     }
 
@@ -124,7 +124,7 @@ public class IridiumDropEvent implements Listener {
 
         if(rngManager.jackpot(5000)){
             itemManager.dropItemOnItem(e.getItems().getFirst(),itemManager.makeBasicItem("Iridium Fragment", new NamespacedKey("iridium", "iridium_fragment"), ItemRarity.COMMON));
-            e.getPlayer().getWorld().spawnParticle(Particle.END_ROD,e.getBlock().getLocation().add(0.5,0.5,0.5),2,2,2,10);
+            e.getPlayer().getWorld().spawnParticle(Particle.END_ROD,e.getBlock().getLocation().add(0.5,0.5,0.5),10,0.5,0.5,0.5);
         }
     }
 }
